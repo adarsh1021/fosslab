@@ -1,0 +1,70 @@
+All commands
+
+pwd
+/home/adarsh
+
+cd
+
+rm
+
+cp
+
+find shell-*
+shell-programs
+shell-programs/hello_world
+
+less commands
+All commands
+
+pwd
+/home/adarsh
+
+cd
+
+rm
+
+cp
+
+find shell-*
+shell-programs
+shell-programs/hello_world
+
+less commands
+
+locate hello
+/usr/lib/grub/i386-pc/hello.mod
+/usr/lib/python2.7/__phello__.foo.py
+/usr/lib/python2.7/__phello__.foo.pyc
+/usr/lib/python3.5/__phello__.foo.py
+/usr/lib/python3.5/__pycache__/__phello__.foo.cpython-35.pyc
+/usr/share/doc/gawk/examples/network/hello-serv.awk
+/usr/share/doc/python3-uno/demo/hello_world_comp.py
+/usr/share/locale-langpack/en@boldquot/LC_MESSAGES/hello.mo
+/usr/share/locale-langpack/en@quot/LC_MESSAGES/hello.mo
+/usr/share/locale-langpack/en_AU/LC_MESSAGES/hello.mo
+/usr/share/locale-langpack/en_CA/LC_MESSAGES/hello.mo
+/usr/share/locale-langpack/en_GB/LC_MESSAGES/hello.mo
+
+mkdir
+
+mv
+
+rmdir
+
+ssh exam@192.168.2.120
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+You have mail.
+Last login: Thu Jan 18 01:26:39 2018 from 192.168.2.199
+
+sudo
+
+chmod a+x
+
+./shell-programs/hello_world
+Hello World !!
