@@ -5,7 +5,7 @@ result="$1"
 # converting pdf to text
 $(pdftotext -layout $result)
 txtfile="${result%.*}.txt"
-resultfile="${result%.*}_SGPA.txt"
+resultfile="SGPA_${result%.*}.txt"
 
 # Removing space, comma, special characters
 $(tr -d '\040\011\012\015\014\054'< $txtfile > temp)
@@ -49,6 +49,7 @@ while read line; do
 	$(echo "${arr[0]}" $(printf "%.1f" "$(echo "$ANS/23" | bc -l;)") >> $resultfile)
 done < result_table
 
-$(rm -f temp result_table)
+# cleaning up
+$(rm -f temp result_table $txtfile)
 
 

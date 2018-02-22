@@ -1,0 +1,55 @@
+#!/bin/bash
+# get result file as argument
+result="$1"
+
+# converting pdf to text
+$(pdftotext -layout $result)
+txtfile="${result%.*}.txt"
+resultfile="SGPA_${result%.*}.txt"
+
+# Removing space, comma, special characters
+$(tr -d '\040\011\012\015\014\054'< $txtfile > temp)
+# Adding newline character
+$(sed -i "s/MDL16/\nMDL16/g" temp)
+$(sed -i "s/TCE/\nTCE/g" temp)
+# Extract only CS
+$(grep "MDL16CS" temp > result_table)
+
+# MA101 PH100 BE110 BE101 BE103 EE100 PH110 EE110 CS110
+$(sed -i "s/CY100(/ /g" result_table)
+$(sed -i "s/BE100(/ /g" result_table)
+$(sed -i "s/EC100(/ /g" result_table)
+$(sed -i "s/CY110(/ /g" result_table)
+$(sed -i "s/EC110(/ /g" result_table)
+$(sed -i "s/MA102(/ /g" result_table)
+$(sed -i "s/BE102(/ /g" result_table)
+$(sed -i "s/CS100(/ /g" result_table)
+$(sed -i "s/CS120(/ /g" result_table)
+$(sed -i "s/)//g" result_table)
+
+# Replacing grades with points
+$(sed -i "s/O/10/g" result_table)
+$(sed -i "s/A+/9/g" result_table)
+$(sed -i "s/A/8/g" result_table)
+$(sed -i "s/B+/7/g" result_table)
+$(sed -i "s/B/6/g" result_table)
+$(sed -i "s/C/5/g" result_table)
+$(sed -i "s/P/4/g" result_table)
+$(sed -i "s/F/0/g" result_table)
+
+while read line; do 	
+	arr=($line) # contains each line with register no. and grades
+	MA=`expr ${arr[1]} \* 4`
+	PH=`expr ${arr[2]} \* 4`
+	BE=`expr ${arr[3]} \* 3`
+	BEE=`expr ${arr[4]} \* 3`
+	BEEE=`expr ${arr[5]} \* 3`
+	EE=`expr ${arr[6]} \* 3`
+	ANS=`expr $MA + $PH + $BE + $BEE + $BEEE + $EE + ${arr[7]} + ${arr[8]} + ${arr[9]}`
+	$(echo "${arr[0]}" $(printf "%.1f" "$(echo "$ANS/23" | bc -l;)") >> $resultfile)
+done < result_table
+
+# cleaning up
+#$(rm -f temp result_table)
+
+
