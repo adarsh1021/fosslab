@@ -1,10 +1,14 @@
 #!/bin/bash
+# get result file as argument
+result="$1"
+
 # converting pdf to text
-$(pdftotext -layout s1result.pdf)
-$(pdftotext -layout s2result.pdf)
+$(pdftotext -layout $result)
+txtfile="${result%.*}.txt"
+resultfile="${result%.*}_SGPA.txt"
 
 # Removing space, comma, special characters
-$(tr -d '\040\011\012\015\014\054'< s1result.txt > temp)
+$(tr -d '\040\011\012\015\014\054'< $txtfile > temp)
 # Adding newline character
 $(sed -i "s/MDL16/\nMDL16/g" temp)
 $(sed -i "s/ELECTRONICS/\nELECTRONICS/g" temp)
@@ -33,7 +37,6 @@ $(sed -i "s/C/5/g" result_table)
 $(sed -i "s/P/4/g" result_table)
 $(sed -i "s/F/0/g" result_table)
 
-file=result_table
 while read line; do 	
 	arr=($line) # contains each line with register no. and grades
 	MA=`expr ${arr[1]} \* 4`
@@ -43,9 +46,9 @@ while read line; do
 	BEEE=`expr ${arr[5]} \* 3`
 	EE=`expr ${arr[6]} \* 3`
 	ANS=`expr $MA + $PH + $BE + $BEE + $BEEE + $EE + ${arr[7]} + ${arr[8]} + ${arr[9]}`
-	$(echo "${arr[0]}" $(printf "%.1f" "$(echo "$ANS/23" | bc -l;)") >> result_final.txt)
+	$(echo "${arr[0]}" $(printf "%.1f" "$(echo "$ANS/23" | bc -l;)") >> $resultfile)
 done < result_table
 
-$(rm temp result_table s1result.txt s2result.txt)
+$(rm -f temp result_table)
 
 
