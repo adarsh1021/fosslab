@@ -37,6 +37,9 @@ $(sed -i "s/C/5/g" result_table)
 $(sed -i "s/P/4/g" result_table)
 $(sed -i "s/F/0/g" result_table)
 
+# clearing the contents of the file incase it exists
+$(echo -n > $resultfile)
+
 while read line; do 	
 	arr=($line) # contains each line with register no. and grades
 	MA=`expr ${arr[1]} \* 4`
@@ -48,6 +51,8 @@ while read line; do
 	ANS=`expr $MA + $PH + $BE + $BEE + $BEEE + $EE + ${arr[7]} + ${arr[8]} + ${arr[9]}`
 	$(echo "${arr[0]}" $(printf "%.1f" "$(echo "$ANS/23" | bc -l;)") >> $resultfile)
 done < result_table
+
+$(sed -i "s/MDL165S/MDL16CS/g" $resultfile)
 
 # cleaning up
 $(rm -f temp result_table $txtfile)
