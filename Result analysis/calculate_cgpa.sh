@@ -27,7 +27,7 @@ while read line; do
 done < temp
 
 # cleaning up the result
-$(cat res | column -t -s "|" > RESULT)
+$(cat res | column -t -s "|" > RESULT.txt)
 
 # cleaning up
 $(rm -f temp tempresult res)
