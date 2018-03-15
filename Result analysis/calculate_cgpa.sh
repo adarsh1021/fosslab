@@ -16,18 +16,20 @@ done < temp
 $(echo -n > temp)
 # moving only MDL roll numbers
 $(cat c4b.txt | grep MDL > temp) 
+$(awk -F" " '{ print $6, $7, $8, $9}' temp > tempnames)
+
 
 # clearing RESULT file
 $(echo -n > res)
 while read line; do 
 	# reading each row from class
 	arr=($line)
-	student=($(cat tempresult | grep "${arr[5]}"))
-	$(echo -e "${arr[5]} | ${arr[6]} ${arr[7]} ${arr[8]} | ${student[1]} | ${student[2]} | ${student[3]}" >> res)
-done < temp
+	student=($(cat tempresult | grep "${arr[0]}"))
+	#echo $student
+	$(echo -e "${arr[0]} | ${arr[1]} ${arr[2]} ${arr[3]} | ${student[1]} | ${student[2]} | ${student[3]}" >> res)
+done < tempnames
 
 # cleaning up the result
 $(cat res | column -t -s "|" > RESULT.txt)
-
 # cleaning up
-$(rm -f temp tempresult res)
+$(rm -f temp tempresult tempnames res)

@@ -1,0 +1,61 @@
+MDL16CS001    AARATHI MENON                8.2    8.5    8.4
+MDL16CS002    ABHIJITH A                   8.7    8.0    8.3
+MDL16CS004    ABHISHEK P                   5.9    6.4    6.2
+MDL16CS005    ABIN MATHEW THOMAS           5.0    4.7    4.8
+MDL16CS006    ACHUTH GOVIND R              8.3    8.1    8.2
+MDL16CS007    ADARSH P MENON               9.2    9.0    9.1
+MDL16CS013    AISHWARYA RAMESH K           8.9    8.4    8.6
+MDL16CS015    AKSHAY BALAKRISHNAN          8.7    8.6    8.6
+MDL16CS017    ALFIN S THOMAS               8.5    6.9    7.7
+MDL16CS019    ALWIN SHAJI JOSEPH           7.9    7.1    7.5
+MDL16CS020    AMAN O                       8.4    8.9    8.7
+MDL16CS022    ANAND S MENON                7.7    7.4    7.5
+MDL16CS024    ANEESH T GEORGE              5.5    6.5    6.0
+MDL16CS025    ANJITHA JOYS                 8.5    7.2    7.8
+MDL16CS026    ANN SUSAN BAIJU              7.9    7.6    7.7
+MDL16CS027    K ANUPAMA PRAKASH            8.8    7.5    8.1
+MDL16CS031    ARJUN KRISHNA A              7.9    5.8    6.8
+MDL16CS032    ARJUN RAJ                    9.0    8.4    8.7
+MDL16CS034    ARUN ABRAHAM                 9.4    8.7    9.0
+MDL16CS038    ASWATHY R                    8.5    8.5    8.5
+MDL16CS039    ASWIN P S                    8.7    8.3    8.5
+MDL16CS040    AUGUSTINE THARAKAN           8.1    8.3    8.2
+MDL16CS041    BENJAMIN BENNY               7.8    7.4    7.6
+MDL16CS048    E VISHNU BHAGYANATH          8.5    8.3    8.4
+MDL16CS049    EBI M J                      3.0    2.9    2.9
+MDL16CS050    FARHA ABDUL KAREEM           9.6    9.4    9.5
+MDL16CS054    JESWIN CYRIAC                8.1    7.5    7.8
+MDL16CS056    JISHNU S NAIR                9.1    9.6    9.4
+MDL16CS058    JOANN P ELZA                 9.1    7.9    8.5
+MDL16CS060    JOSEPH F MATHEW              8.0    8.1    8.1
+MDL16CS061    JOSEPH RAJU                  7.3    3.8    5.5
+MDL16CS063    KENNETH GODWIN ISIDORE       8.5    8.0    8.2
+MDL16CS067    KURIAN THOMAS PULIMOOTTIL    8.1    7.8    7.9
+MDL16CS071    MEGHA DINESH                 9.4    9.0    9.2
+MDL16CS072    MEGHA V K                    8.7    7.9    8.3
+MDL16CS073    MERIN JOSE                   9.4    9.1    9.2
+MDL16CS077    MUHAMMED IRFAN A             8.5    7.8    8.1
+MDL16CS078    NEENA MATHEW                 9.5    8.7    9.1
+MDL16CS079    NEHA MARIA JOSEPH            9.5    8.9    9.2
+MDL16CS082    NIKITA UDAY                  8.5    7.9    8.2
+MDL16CS083    NITHIN S SABU                9.0    7.4    8.2
+MDL16CS086    PALLAVI V G                  9.1    8.5    8.8
+MDL16CS088    PETER JOE PAYYAPPIILY        9.5    8.6    9.0
+MDL16CS090    RAKESH PAI R                 8.2    6.7    7.4
+MDL16CS091    RAWN ABRAHAM RIJU            9.0    8.5    8.7
+MDL16CS093    RISHIKESH K B                9.5    9.1    9.3
+MDL16CS094    ROHAN AJITH                  6.9    8.1    7.5
+MDL16CS095    ROY C A                      9.5    8.7    9.1
+MDL16CS098    SAYYID NAEEMUL HAQ           3.9    3.0    3.4
+MDL16CS099    SERENE ELIZABETH THOMAS      9.3    8.5    8.9
+MDL16CS101    SHAWN JOHN RIJU              8.7    8.3    8.5
+MDL16CS103    SHAZIA SALIM                 8.5    8.5    8.5
+MDL16CS104    SHEHZIN C SHAJAHAN           5.9    7.6    6.8
+MDL16CS105    V SHRIRAM                    8.4    8.4    8.4
+MDL16CS107    SHWETHA R VARMA              8.8    8.5    8.6
+MDL16CS111    SONIYA STELLA M              8.7    8.6    8.6
+MDL16CS115    SUBIN C BENNY                8.3    8.1    8.2
+MDL16CS116    SUJITH K                     7.3    7.6    7.5
+MDL16CS120    VAISHNAV T ULLAS             5.9    8.0    7.0
+MDL16CS121    VINEETH E V                  2.4    3.7    3.1
+MDL16CS123    VYSAKH S                     9.3    8.6    8.9

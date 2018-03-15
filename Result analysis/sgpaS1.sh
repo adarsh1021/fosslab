@@ -30,11 +30,11 @@ $(sed -i "s/)//g" result_table)
 # Replacing grades with points
 $(sed -i "s/O/10/g" result_table)
 $(sed -i "s/A+/9/g" result_table)
-$(sed -i "s/A/8/g" result_table)
-$(sed -i "s/B+/7/g" result_table)
-$(sed -i "s/B/6/g" result_table)
-$(sed -i "s/C/5/g" result_table)
-$(sed -i "s/P/4/g" result_table)
+$(sed -i "s/A/8.5/g" result_table)
+$(sed -i "s/B+/8/g" result_table)
+$(sed -i "s/B/7/g" result_table)
+$(sed -i "s/C/6/g" result_table)
+$(sed -i "s/P/5/g" result_table)
 $(sed -i "s/F/0/g" result_table)
 
 # clearing the contents of the file incase it exists
@@ -42,19 +42,20 @@ $(echo -n > $resultfile)
 
 while read line; do 	
 	arr=($line) # contains each line with register no. and grades
-	MA=`expr ${arr[1]} \* 4`
-	PH=`expr ${arr[2]} \* 4`
-	BE=`expr ${arr[3]} \* 3`
-	BEE=`expr ${arr[4]} \* 3`
-	BEEE=`expr ${arr[5]} \* 3`
-	EE=`expr ${arr[6]} \* 3`
-	ANS=`expr $MA + $PH + $BE + $BEE + $BEEE + $EE + ${arr[7]} + ${arr[8]} + ${arr[9]}`
+	MA=$(bc <<< "scale=2; (${arr[1]})*4")
+	PH=$(bc <<< "scale=2; (${arr[2]})*4")
+	BE=$(bc <<< "scale=2; (${arr[3]})*3")
+	BEE=$(bc <<< "scale=2; (${arr[4]})*3")
+	BEEE=$(bc <<< "scale=2; (${arr[5]})*3")
+	EE=$(bc <<< "scale=2; (${arr[6]})*3")
+	ANS=$(bc <<< "scale=2; ($MA)+($PH)+($BE)+($BEE)+($BEEE)+($EE)+(${arr[7]})+(${arr[8]})+(${arr[9]})")
 	$(echo "${arr[0]}" $(printf "%.1f" "$(echo "$ANS/23" | bc -l;)") >> $resultfile)
 done < result_table
 
-$(sed -i "s/MDL165S/MDL16CS/g" $resultfile)
+$(sed -i "s/MDL166S/MDL16CS/g" $resultfile)
 
 # cleaning up
-$(rm -f temp result_table $txtfile)
+$(rm -f temp result_table)
+
 
 
