@@ -1,0 +1,1 @@
+## Paste these files in the htdocs and go to localhost in browser
