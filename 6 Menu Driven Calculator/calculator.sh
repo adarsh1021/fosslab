@@ -28,8 +28,10 @@ esac
 echo "Answer : $ans"
 echo "Do you want to continue ?"
 read i
+
 if [ $i != "y" ]
 then
  exit
 fi
+
 done
